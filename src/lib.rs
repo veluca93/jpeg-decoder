@@ -26,6 +26,7 @@
 //! let metadata = decoder.info().unwrap();
 //! ```
 
+#![feature(target_feature_11)]
 #![deny(missing_docs)]
 #![deny(unsafe_code)]
 #![cfg_attr(feature = "platform_independent", forbid(unsafe_code))]

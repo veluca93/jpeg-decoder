@@ -1395,10 +1395,7 @@ fn color_convert_line_ycbcr(data: &[Vec<u8>], output: &mut [u8]) {
     #[cfg(not(feature = "platform_independent"))]
     let arch_specific_pixels = {
         if let Some(ycbcr) = crate::arch::get_color_convert_line_ycbcr() {
-            #[allow(unsafe_code)]
-            unsafe {
-                ycbcr(y, cb, cr, output)
-            }
+            ycbcr(y, cb, cr, output)
         } else {
             0
         }
